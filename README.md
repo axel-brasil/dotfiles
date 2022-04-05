@@ -1,1 +1,1 @@
-My personal configuration, mainly for used with bspwm.
+# My personal configuration, mainly for used with bspwm.#
