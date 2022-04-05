@@ -1,0 +1,144 @@
+#
+# AxelBrasil - bspwm - Arch Linux
+#
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+
+################################ Launchers ################################
+ 
+# show open windows
+super + @space
+  rofi -width 630 -show
+
+# show time
+ctrl + @space
+  /home/axel/.local/bin/rofi_time
+
+# program launcher
+alt + @space
+  rofi -show drun
+
+# terminal emulator
+alt + Return
+	konsole
+
+
+
+############################## Brightness ##################################
+
+super + ctrl + p 
+  /home/axel/.local/bin/change_brightness -i
+
+super + ctrl + o
+  /home/axel/.local/bin/change_brightness -d
+
+###################### My Layout/Window Organization #######################
+
+# open terminal/vscode/chromium  
+alt + shift + w
+  /home/axel/.local/bin/worklayout
+
+# set tiled(bspwm default) layout
+alt + 5
+  bsp-layout set tiled
+
+# set tall/reverse tall layout
+alt + 6
+  bsp-layout set tall -- --master-size 0.5
+alt + shift + 6
+  bsp-layout set rtall -- --master-size 0.5
+
+# set grid layout
+alt + 7
+  bsp-layout set grid
+
+
+############################## Bspwm Hotkeys ###############################
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }q
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+
+############################### State/Flags ############################### 
+
+# set the window state
+super + {shift + t,shift + f}
+	bspc node -t {tiled,floating}
+
+
+############################### Focus/Swap ###############################
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+alt + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+  #notification --desktop-name
+
+############################### Preselect ###############################
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+  bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+
+############################### Move/Resize ###############################
+
+# expand a window by moving one of its side outward
+alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+
+
+############################################################################
+#                                                                          #
+#                               END OF FILE                                #
+#                                                                          #
+############################################################################
+
