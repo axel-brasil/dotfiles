@@ -8,7 +8,7 @@ picom &
 
 polybar main &
 xset -dpms s off
-feh --bg-scale /home/axel/Immagini/Wallpapers/299.png &
+feh --bg-scale $HOME/Immagini/Wallpapers/299.png &
 bspc monitor -d 1 2 3 4
 
 bspc config focused_border_color "#FFFFFF"
