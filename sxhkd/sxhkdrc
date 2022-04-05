@@ -15,7 +15,7 @@ super + @space
 
 # show time
 ctrl + @space
-  /home/axel/.local/bin/rofi_time
+  $HOME/.local/bin/rofi_time
 
 # program launcher
 alt + @space
@@ -30,16 +30,16 @@ alt + Return
 ############################## Brightness ##################################
 
 super + ctrl + p 
-  /home/axel/.local/bin/change_brightness -i
+  $HOME/.local/bin/change_brightness -i
 
 super + ctrl + o
-  /home/axel/.local/bin/change_brightness -d
+  $HOME/.local/bin/change_brightness -d
 
 ###################### My Layout/Window Organization #######################
 
 # open terminal/vscode/chromium  
 alt + shift + w
-  /home/axel/.local/bin/worklayout
+  $HOME/.local/bin/worklayout
 
 # set tiled(bspwm default) layout
 alt + 5
