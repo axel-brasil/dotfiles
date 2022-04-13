@@ -9,7 +9,7 @@ wmname compiz
 picom &
 
 polybar main &
-feh --bg-scale $HOME/Immagini/Wallpapers/34.jpg &
+feh --bg-scale $HOME/.config/bspwm/wallpapers/1.jpg &
 bspc monitor -d Main Opt Media Games
 
 bspc config focused_border_color "#FFFFFF"
