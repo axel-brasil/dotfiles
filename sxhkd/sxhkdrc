@@ -15,7 +15,7 @@ super + @space
 
 # show time
 ctrl + @space
-  $HOME/.local/bin/rofi_time
+  $HOME/.local/bin/custom_bin/rofi_time
 
 # program launcher
 alt + @space
@@ -30,12 +30,10 @@ alt + Return
 ############################## Brightness ##################################
 
 super + ctrl + p 
-  $HOME/.local/bin/change_brightness -i
+  $HOME/.local/bin/custom_bin/change_brightness -i
 
 super + ctrl + o
-  $HOME/.local/bin/change_brightness -d
-
-###################### My Layout/Window Organization #######################
+  $HOME/.local/bin/custom_bin/change_brightness -d
 
 # open terminal/vscode/chromium  
 alt + shift + w
@@ -89,8 +87,11 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+super + Tab
+	bspc desktop -f last
+
+alt + Tab
+	bspc node -f last
 
 # focus the older or newer node in the focus history
 alt + {o,i}
