@@ -23,7 +23,7 @@ alt + @space
 
 # terminal emulator
 alt + Return
-	konsole
+	gnome-terminal
 
 
 
@@ -34,10 +34,6 @@ super + ctrl + p
 
 super + ctrl + o
   $HOME/.local/bin/custom_bin/change_brightness -d
-
-# open terminal/vscode/chromium  
-alt + shift + w
-  $HOME/.local/bin/worklayout
 
 # set tiled(bspwm default) layout
 alt + 5

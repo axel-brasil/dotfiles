@@ -1,7 +1,8 @@
 set termguicolors
-colorscheme gruvbox
+colorscheme customgruv
 syntax enable
 
+set mouse=a
 set nostartofline
 set incsearch
 set number
@@ -12,7 +13,7 @@ set noignorecase
 set smartcase
 set nocursorcolumn
 set cursorline
-set autoindent smartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+set autoindent smartindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 
 " Terminal Function
