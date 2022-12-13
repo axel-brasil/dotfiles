@@ -100,13 +100,13 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 hi TabLineFill     guifg=#1D1F21 guibg=#1D1F21
 hi TabLine         guibg=#1D1F21 guifg=#808080 gui=none
 
-hi Normal          guifg=#F8F8F2 guibg=#000000
+hi Normal          guifg=#F8F8F2 guibg=#1e1e1e
 hi Comment         guifg=#7C7C7C
 hi CursorLine                    guibg=#293739
 hi CursorLineNr    guifg=#B6B7EB               gui=none
 hi CursorColumn                  guibg=#293739
-hi ColorColumn     guifg=#B62323 guibg=#000000
-hi LineNr          guifg=#465457 guibg=#000000
+hi ColorColumn     guifg=#B62323 guibg=#1e1e1e
+hi LineNr          guifg=#465457 guibg=#1e1e1e
 hi NonText         guifg=#465457
 hi SpecialKey      guifg=#465457
 

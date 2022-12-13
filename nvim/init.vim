@@ -2,7 +2,7 @@ set termguicolors
 colorscheme customgruv
 syntax enable
 
-set mouse=a
+set mouse=
 set nostartofline
 set incsearch
 set number
@@ -15,6 +15,17 @@ set nocursorcolumn
 set cursorline
 set autoindent smartindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
+
+" Coc, use <tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
 
 " Terminal Function
 let g:term_buf = 0
@@ -45,7 +56,18 @@ nnoremap <A-t> :call TermToggle(12)<CR>
 inoremap <A-t> <Esc>:call TermToggle(12)<CR>
 tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
 
+" Toggle nerdtree
+nnoremap <C-t> :NERDTreeToggle<CR>
+
 " Terminal go back to normal mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
+
+call plug#begin('~/.config/nvim/plugins')
+    Plug 'stevearc/vim-arduino'
+    Plug 'stevearc/dressing.nvim'
+    Plug 'preservim/nerdtree'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
 
