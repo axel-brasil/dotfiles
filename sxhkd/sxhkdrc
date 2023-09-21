@@ -23,7 +23,7 @@ alt + @space
 
 # terminal emulator
 alt + Return
-	gnome-terminal
+  alacritty
 
 
 
