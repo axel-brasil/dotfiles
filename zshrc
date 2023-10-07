@@ -1,5 +1,5 @@
 # PATHS
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.local/bin/custom_bin:$HOME/.local/share/ryujinx:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.local/bin/custom_bin:$PATH
 
 # Path to oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
