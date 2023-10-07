@@ -1,0 +1,20 @@
+font:
+  size: 6
+  normal:
+    family: Fira Code
+    style: Medium
+
+  bold:
+    family: Fira Code
+    style: Bold
+
+  italic:
+    family: Fira Code
+    style: Italic
+
+  bold_italic:
+    family: Fira Code
+    style: Bold Italic
+colors:
+  primary:
+    background: "#151515"

@@ -1,15 +1,15 @@
 #! /bin/sh
 
-xrandr --output HDMI-0 --mode 2560x1080 --rate 75 &
+xrandr --output Virtual-1 --mode 2560x1080  &
 xset -dpms s off
-change_brightness
+#change_brightness
 xsetroot -cursor_name left_ptr
 pgrep -x sxhkd > /dev/null || sxhkd &
-wmname compiz
+#wmname compiz
 picom &
 
 polybar main &
-feh --bg-scale $HOME/.config/bspwm/wallpapers/7.jpg &
+feh --bg-scale $HOME/.config/bspwm/wallpapers/2.png &
 bspc monitor -d Main Main1 Opt Media 
 
 bspc config focused_border_color "#FFFFFF"
