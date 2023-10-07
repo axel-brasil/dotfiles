@@ -9,7 +9,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 picom &
 
 polybar main &
-feh --bg-scale $HOME/.config/bspwm/wallpapers/2.png &
+feh --bg-scale $HOME/.config/bspwm/wallpapers/7.jpg &
 bspc monitor -d Main Main1 Opt Media 
 
 bspc config focused_border_color "#FFFFFF"
