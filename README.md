@@ -1,5 +1,8 @@
 # My personal dotfiles
 Bspwm configuration
+<img src="misc/screenshots/screenshot.png" alt="img" align="right" width="400px">
+<img src="misc/screenshots/screenshot.png" alt="img" align="right" width="400px">
+<img src="misc/screenshots/screenshot.png" alt="img" align="right" width="400px">
 ## Dependencies
 + `bspwm`     - Window Manager
 + `sxhkd`     - Hotkey Daemon
