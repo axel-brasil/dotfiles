@@ -1,9 +1,9 @@
 #! /bin/sh
 
-xrandr --output Virtual-1 --mode 2560x1080  &
-xset -dpms s off
+#xrandr --output Virtual-1 --mode 2560x1080  &
+#xset -dpms s off
 #change_brightness
-xsetroot -cursor_name left_ptr
+#xsetroot -cursor_name left_ptr
 pgrep -x sxhkd > /dev/null || sxhkd &
 #wmname compiz
 picom &
@@ -21,20 +21,20 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Productivity
-bspc rule -a Gcolor3     state=floating
-bspc rule -a feh         state=floating
+bspc rule -a Gcolor3         state=floating
+bspc rule -a feh             state=floating
 # Opt
-#bspc rule -a Google-chrome desktop='^2' 
+#bspc rule -a Google-chrome  desktop='^2' 
 # Media
-bspc rule -a Gnome-music desktop='^3' follow=on
+bspc rule -a Gnome-music     desktop='^3' follow=on
 bspc rule -a org.gnome.Music desktop='^3' follow=on
-bspc rule -a vlc         desktop='^3' follow=on
-bspc rule -a Totem       desktop='^3' follow=on
+bspc rule -a vlc             desktop='^3' follow=on
+bspc rule -a Totem           desktop='^3' follow=on
 # Games
-bspc rule -a yuzu        desktop='^4' follow=on state=floating
-bspc rule -a Ryujinx        desktop='^4' follow=on state=floating
-bspc rule -a Steam       desktop='^4' follow=on state=floating
-bspc rule -a Bottles     desktop='^4' follow=on state=floating
+bspc rule -a yuzu            desktop='^4' follow=on state=floating
+bspc rule -a Ryujinx         desktop='^4' follow=on state=floating
+bspc rule -a Steam           desktop='^4' follow=on state=floating
+bspc rule -a Bottles         desktop='^4' follow=on state=floating
 # Others
-bspc rule -a Kupfer.py   focus=on
-bspc rule -a Screenkey   manage=off
+bspc rule -a Kupfer.py       focus=on
+bspc rule -a Screenkey       manage=off
