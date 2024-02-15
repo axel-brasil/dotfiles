@@ -1,5 +1,4 @@
 set termguicolors
-colorscheme customgruv
 syntax enable
 
 set mouse=
@@ -13,8 +12,9 @@ set noignorecase
 set smartcase
 set nocursorcolumn
 set cursorline
-set autoindent smartindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set autoindent smartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
+highlight NonText guifg=#2F2F2F
 
 " Coc, use <tab> to trigger completion and navigate to the next complete item
 function! CheckBackspace() abort
@@ -68,6 +68,14 @@ call plug#begin('~/.config/nvim/plugins')
     Plug 'stevearc/dressing.nvim'
     Plug 'preservim/nerdtree'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'sheerun/vim-polyglot'
+    Plug 'lukas-reineke/indent-blankline.nvim'
+    Plug 'srcery-colors/srcery-vim'
 call plug#end()
 
+lua << EOF
+require("ibl").setup { scope = { highlight = highlight } }
+EOF
 
+colorscheme srcery
+hi Normal guibg=NONE ctermbg=NONE
