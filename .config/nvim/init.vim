@@ -50,11 +50,16 @@ function! TermToggle(height)
     endif
 endfunction
 
+" Split focus 
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 " Toggle terminal on/off (neovim)
-nnoremap <A-t> :call TermToggle(12)<CR>
-inoremap <A-t> <Esc>:call TermToggle(12)<CR>
-tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
+nnoremap <M-t> :call TermToggle(12)<CR>
+inoremap <M-t> <Esc>:call TermToggle(12)<CR>
+tnoremap <M-t> <C-\><C-n>:call TermToggle(12)<CR>
 
 " Toggle nerdtree
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -71,11 +76,15 @@ call plug#begin('~/.config/nvim/plugins')
     Plug 'sheerun/vim-polyglot'
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'srcery-colors/srcery-vim'
+    Plug 'RaafatTurki/corn.nvim'
 call plug#end()
 
 lua << EOF
 require("ibl").setup { scope = { highlight = highlight } }
+require 'corn'.setup()
 EOF
 
-colorscheme srcery
+colorscheme srcery 
 hi Normal guibg=NONE ctermbg=NONE
+
+" EOF
