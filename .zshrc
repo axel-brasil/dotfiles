@@ -11,7 +11,7 @@ ZSH_THEME="afowler"
 #ZSH_THEME="random"
 
 # PLUGINS
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # ALIAS
