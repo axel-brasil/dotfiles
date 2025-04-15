@@ -1,4 +1,4 @@
-# My personal dotfiles
+# My OLD personal dotfiles
 Bspwm configuration
 
 ## Dependencies
