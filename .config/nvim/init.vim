@@ -94,7 +94,7 @@ function gnome_theme_changer()
         vim.cmd("highlight Normal guibg=none")
     else
         vim.cmd("let airline_theme='papercolor'")
-        vim.cmd("colorscheme lunaperche")
+        vim.cmd("colorscheme onedark")
         vim.o.background = "light"
         vim.cmd("highlight Normal guibg=none")
     end
